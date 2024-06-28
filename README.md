@@ -156,7 +156,8 @@ type Item = {
 
 To query our collection, we simply use the `nearText` function, passing our `query`. `limit` is how many results we want to be returned.
 
-For our search component, nothing fancy just an input with a button.
+For our search component, nothing fancy just an input with a button. We use the url params for our query string so when searching, `?query=somesearch` will be happened to our url.
+
 
 ```
 "use client";
@@ -192,9 +193,7 @@ export const Search = () => {
 };
 ```
 
-We use the url params for our query string so when searching `?query=somesearch` will be happened to our url.
-
-the query is passed down to `SearchResult` component
+The query is passed down to `SearchResult` component where we call the search function.
 
 ```
 import { nearTextQuery } from "@/lib/weaviate";
@@ -225,7 +224,7 @@ export const SearchResults: React.FC<Props> = async ({ query }) => {
 };
 ```
 
-and our very simple loading component for the suspense fallback
+And our very simple loading component for the suspense fallback.
 
 ```
 import { Skeleton } from "@/components/ui/skeleton";
@@ -244,7 +243,7 @@ export const Loading = () => {
 };
 ```
 
-All put together in the page
+All put together in the page.
 
 ```
 import { Search } from "./_components/search";
@@ -273,4 +272,4 @@ export default function Home({
 }
 ```
 
-And thats pretty mnuch it
+And thats pretty much it. You should be able to run the app and try out the search.

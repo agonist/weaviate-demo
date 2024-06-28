@@ -123,11 +123,11 @@ Add a `seed` command in your `package.json`
 
 And voila. We're finally ready to run our script with `pnpm seed`. Data should be in rerady to be used.
 
-## Sementic search
+## Semantic search
 
-Now that we've been through the boring setup, we can start searching things!
+Now that we've been through the setup part, we can start searching things!
 
-> _Sementic_ or _Similarity_ search is looking for vectors with the most similarity for a given input.
+> _Semantic_ or _Similarity_ search is looking for vectors with the most similarity for a given input.
 
 First we run `pnpm dlx shadcn-ui@latest add button input skeleton` to get the few components that we need.
 
